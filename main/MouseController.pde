@@ -34,5 +34,5 @@ void mouseReleased() {
   //When mousebutton released throws the ball.
   float dragForce = 20.0;
   ball.speed = (lastMousePosY - mousePosY) / dragForce;
-  //ball.speed = (lastMousePosX + mousePosX) / dragForce;
+  ball.acceleration = (lastMousePosX - mousePosX) / dragForce;
 }
