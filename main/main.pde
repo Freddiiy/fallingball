@@ -1,6 +1,3 @@
-float gravity = 0.1; //force of gravity
-float dampening = -0.50; //force the ball will bounce back up
-float acceleration;
 float floor;
 float roof;
 float rWall, lWall;

@@ -1,4 +1,6 @@
 class Ball {
+  public float gravity = 0.1; //force of gravity
+  public float dampening = -0.50; //force the ball will bounce back up
   public float speed = 0;
   public float acceleration = 0;
   public float x, y, w, h;

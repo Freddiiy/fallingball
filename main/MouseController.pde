@@ -12,6 +12,7 @@ void mouseController() {
   mousePosX = mouseX;
   mousePosY = mouseY;
   println(lastMousePosX + " " + lastMousePosY + " " + mousePosX + " " + mousePosY);
+  println(ball.x + " " + ball.y);
 }
 
 void mouseDragged() {
