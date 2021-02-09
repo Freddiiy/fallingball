@@ -24,5 +24,5 @@ void draw() {
   background(255);
   ball.render();
   ball.physics();
-  playerController();
+  mouseController();
 }

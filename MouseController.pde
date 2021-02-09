@@ -1,4 +1,4 @@
-void playerController() {
+void mouseController() {
   // makes the ball follow curser
   // creates a line from cliked to held mouse point
   if (m1Pressed == true) {
