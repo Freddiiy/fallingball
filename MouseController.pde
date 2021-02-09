@@ -2,8 +2,8 @@ void mouseController() {
   // makes the ball follow curser
   // creates a line from cliked to held mouse point
   if (m1Pressed == true) {
-    ball.x = mouseX;
-    ball.y = mouseY;
+    ball.x = mousePosX;
+    ball.y = mousePosY;
     ball.speed = 0;
 
     fill(0);
@@ -20,6 +20,7 @@ void mouseDragged() {
 boolean m1Pressed;
 int lastMousePosX, lastMousePosY;
 int mousePosX = mouseX, mousePosY = mouseY;
+
 void mousePressed() {
   m1Pressed = true;
 

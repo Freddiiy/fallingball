@@ -16,8 +16,8 @@ class Ball {
       this.speed = this.speed * dampening;
       this.y = floor;
     }
-    /*//checks for roof collision
-    if (this.y < roof) {
+    //checks for roof collision
+    /*if (this.y < roof) {
       this.speed = this.speed * dampening;
       this.y = roof;
     }
