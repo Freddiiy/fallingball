@@ -3,6 +3,7 @@ float roof;
 float rWall, lWall;
 
 Ball ball = new Ball();
+Portal portal = new Portal();
 
 void setup() {
   frameRate(60);
@@ -21,5 +22,6 @@ void draw() {
   background(255);
   ball.render();
   ball.physics();
+  portal.render();
   mouseController();
 }

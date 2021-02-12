@@ -20,11 +20,10 @@ class Ball {
       this.y = floor;
     }
     //checks for roof collision
-    /*if (this.y < roof) {
+    if (this.y < roof) {
       this.speed = this.speed * dampening;
       this.y = roof;
     }
-    */
     // checks for left wall
     if (this.x < lWall) {
       this.acceleration = this.acceleration * dampening;
@@ -34,6 +33,22 @@ class Ball {
     if (this.x > rWall) {
       this.acceleration = this.acceleration * dampening;
       this.x = rWall;
+    }
+    float rightSideOfBall = this.x + ball.w/2;
+    float leftSideOfBall = this.x - ball.w/2;
+    float botSideOfBall = this.y + ball.h/2;
+    float topSideOfBall = this.y - ball.h/2;
+    
+    float leftSideOfOrangePortal = portal.x - portal.w/2;
+    //checks for orange portal
+    if (portal.active == true) {
+      if (this.x + ball.w/2 > portal.x - portal.w/2 && //detects left side of portal
+          this.x - ball.w/2 < portal.x + portal.w/2 && //detects right side of portal
+          this.y + ball.h/2 > portal.y - portal.h/2 && //detects 
+          this.y + ball.h/2 > portal.y + portal.h/2) {
+        this.x = portal.bx;
+        this.y = portal.by;
+      }
     }
   }
 }

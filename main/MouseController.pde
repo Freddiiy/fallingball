@@ -15,25 +15,45 @@ void mouseController() {
   println(ball.x + " " + ball.y);
 }
 
-void mouseDragged() {
-}
-
 boolean m1Pressed;
 int lastMousePosX, lastMousePosY;
 int mousePosX = mouseX, mousePosY = mouseY;
 
 void mousePressed() {
-  m1Pressed = true;
+  if (mouseButton == LEFT) {
+    m1Pressed = true;
 
-  lastMousePosX = mousePosX;
-  lastMousePosY = mousePosY;
+    lastMousePosX = mousePosX;
+    lastMousePosY = mousePosY;
+  }
+  if (mouseButton == RIGHT) {
+    portal.active = true;
+    println(portal.active);
+    
+    portal.x = mousePosX;
+    portal.y = mousePosY;
+    
+  }
 }
 
 void mouseReleased() {
-  m1Pressed = false;
-  
+
+
   //When mousebutton released throws the ball.
   float dragForce = 20.0;
-  ball.speed = (lastMousePosY - mousePosY) / dragForce;
-  ball.acceleration = (lastMousePosX - mousePosX) / dragForce;
+  if (mouseButton == LEFT) {
+    m1Pressed = false;
+ 
+    ball.speed = (lastMousePosY - mousePosY) / dragForce;
+    ball.acceleration = (lastMousePosX - mousePosX) / dragForce;
+  }
+  if (mouseButton == RIGHT) {
+      
+  }
+}
+
+void keyPressed() {
+  if (key == 'q') {
+    portal.active = false;
+  }
 }
