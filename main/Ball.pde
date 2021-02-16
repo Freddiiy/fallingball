@@ -7,7 +7,7 @@ class Ball {
   void render() {
     //draws ellipse
     fill(0, 255, 255);
-    ellipse(x, y, w, h);
+    ellipse(this.x, this.y, this.w, this.h);
   }
   void physics() {
     this.y = this.y + this.speed;
